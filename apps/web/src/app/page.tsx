@@ -2,24 +2,29 @@ import Link from "next/link";
 
 const services: { label: string; description: string }[] = [
   {
-    label: "AI-Powered Apps",
+    label: "Design & UI/UX",
     description:
-      "Full-stack apps with LLM integration. RAG pipelines, custom agents, end-to-end product. React, Python, Figma.",
+      "Product design, design systems, motion. Wireframes to high-fidelity in Figma. Brand, type, color.",
   },
   {
-    label: "Automation & Co-pilots",
+    label: "Mobile apps",
     description:
-      "Conversational agents and workflow automation, integrated into your business stack. n8n, Zapier, Make, custom.",
+      "iOS, Android, cross-platform. React Native, Expo, native modules when needed.",
   },
   {
-    label: "Mobile & Web Apps",
+    label: "Web apps & SaaS",
     description:
-      "End-to-end products from concept to App Store deployment. Figma, React Native, React, Next.js.",
+      "Marketing sites, multi-role dashboards, full-stack platforms. React, Next.js, Vite, Tailwind, shadcn.",
   },
   {
-    label: "Infrastructure",
+    label: "AI & ML engineering",
     description:
-      "Auth, payments, data, deployment, edge functions. Supabase, Firebase, Vercel, EAS.",
+      "LLM features (RAG, agents, vision), custom ML models in production. OpenAI, Claude, Vertex AI, CatBoost.",
+  },
+  {
+    label: "Backend, data & automation",
+    description:
+      "APIs, scrapers, data pipelines, workflow automation, auth, payments, deploy. Supabase, Firebase, Postgres, Apify, Edge Functions.",
   },
 ];
 
@@ -33,9 +38,12 @@ export default function Home() {
             className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
             style={{ textWrap: "balance" }}
           >
-            We design, build, and ship products.
+            We design and build software.
           </h1>
-          <div className="mt-12 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest md:mt-16">
+          <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
+            Mobile, web, AI, automation.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3 font-mono text-xs uppercase tracking-widest md:mt-12">
             <Link
               href="/work"
               className="border border-foreground bg-foreground px-5 py-3 text-background transition hover:bg-transparent hover:text-foreground"

@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "The Dev Agency",
   description:
-    "A studio for end-to-end design and engineering. We design, build, and ship products — modular engagements, lean stacks, production-grade infrastructure.",
+    "We design and build software. Mobile apps, web platforms, AI integrations, and automation. The Dev Agency.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
