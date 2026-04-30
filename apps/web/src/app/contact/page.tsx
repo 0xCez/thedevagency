@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = { title: "Contact — The Dev Agency" };
 
-const EMAIL = "hello@thedevagency.xyz";
+const EMAIL = "cesar@thedevagency.xyz";
 
 export default function ContactPage() {
   return (
