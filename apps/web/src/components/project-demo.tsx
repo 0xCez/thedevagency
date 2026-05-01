@@ -1,12 +1,23 @@
 import { snackUrl, appetizeUrl, type EmbedConfig } from "@portfolio/embeds";
+import type { Dictionary } from "@/lib/i18n";
 import { IframeWithTabs } from "./iframe-with-tabs";
 import { VideoWithTabs } from "./video-with-tabs";
 
-export function ProjectDemo({ demo }: { demo: EmbedConfig }) {
+export function ProjectDemo({
+  demo,
+  dict,
+}: {
+  demo: EmbedConfig;
+  dict: Dictionary;
+}) {
+  const liveLabel = dict.project.sections.liveDemo;
+  const rolesLabel = dict.project.sections.roles;
+  const walkthroughsLabel = dict.project.sections.walkthroughs;
+
   switch (demo.type) {
     case "snack":
       return (
-        <Wrap label="Live demo">
+        <Wrap label={liveLabel}>
           <PhoneFrame>
             <iframe
               src={snackUrl(demo)}
@@ -19,7 +30,7 @@ export function ProjectDemo({ demo }: { demo: EmbedConfig }) {
       );
     case "appetize":
       return (
-        <Wrap label="Live demo">
+        <Wrap label={liveLabel}>
           <PhoneFrame>
             <iframe
               src={appetizeUrl(demo)}
@@ -37,22 +48,34 @@ export function ProjectDemo({ demo }: { demo: EmbedConfig }) {
             url={demo.url}
             views={demo.views}
             frame={demo.frame === "browser" ? "browser" : "none"}
+            rolesLabel={rolesLabel}
+            liveLabel={liveLabel}
           />
         );
       }
       return (
-        <Wrap label="Live demo">
+        <Wrap label={liveLabel}>
           <BrowserFrame url={demo.url}>
-            <iframe src={demo.url} className="h-full w-full border-0" loading="lazy" />
+            <iframe
+              src={demo.url}
+              className="h-full w-full border-0"
+              loading="lazy"
+            />
           </BrowserFrame>
         </Wrap>
       );
     case "video":
       if (demo.views && demo.views.length > 0) {
-        return <VideoWithTabs views={demo.views} />;
+        return (
+          <VideoWithTabs
+            views={demo.views}
+            walkthroughsLabel={walkthroughsLabel}
+            liveLabel={liveLabel}
+          />
+        );
       }
       return (
-        <Wrap label="Live demo">
+        <Wrap label={liveLabel}>
           <PhoneFrame>
             <video
               src={demo.src}
@@ -104,7 +127,13 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
   );
 }
 
-function BrowserFrame({ url, children }: { url: string; children: React.ReactNode }) {
+function BrowserFrame({
+  url,
+  children,
+}: {
+  url: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="overflow-hidden rounded-lg border border-border bg-zinc-950 shadow-2xl">
       <div className="flex items-center gap-2 border-b border-border px-4 py-2">

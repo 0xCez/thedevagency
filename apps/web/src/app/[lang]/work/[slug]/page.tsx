@@ -1,19 +1,39 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getProject, getProjects } from "@/content/projects";
+import { getProject, getProjectSlugs } from "@/content/projects";
 import { ProjectDemo } from "@/components/project-demo";
+import { getDictionary, isLocale, locales, type Dictionary } from "@/lib/i18n";
 
 export function generateStaticParams() {
-  return getProjects().map((p) => ({ slug: p.slug }));
+  const slugs = getProjectSlugs();
+  return locales.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}) {
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) return {};
+  const dict = await getDictionary(lang);
+  const project = getProject(slug, dict);
+  if (!project) return {};
+  return {
+    title: project.title,
+    description: project.tagline,
+  };
 }
 
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ lang: string; slug: string }>;
 }) {
-  const { slug } = await params;
-  const project = getProject(slug);
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const project = getProject(slug, dict);
   if (!project) notFound();
 
   const linkEntries = project.links
@@ -28,7 +48,8 @@ export default async function ProjectPage({
       <header className="mb-16">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <p className="font-mono text-xs uppercase tracking-widest text-muted">
-            ◼ {project.category} / {project.year} / {project.status}
+            ◼ {dict.categories[project.category]} / {project.year} /{" "}
+            {dict.status[project.status]}
           </p>
           {linkEntries.length > 0 && (
             <div className="flex flex-wrap gap-2">
@@ -40,7 +61,7 @@ export default async function ProjectPage({
                   rel="noopener noreferrer"
                   className="border border-foreground bg-foreground px-4 py-2 font-mono text-xs uppercase tracking-widest text-background transition hover:bg-transparent hover:text-foreground"
                 >
-                  {linkLabel(key)} →
+                  {linkLabel(key, dict)} →
                 </Link>
               ))}
             </div>
@@ -65,23 +86,23 @@ export default async function ProjectPage({
       </header>
 
       <div className="mb-16">
-        <ProjectDemo demo={project.demo} />
+        <ProjectDemo demo={project.demo} dict={dict} />
       </div>
 
       {project.architecture && (
-        <Section label="Architecture">
+        <Section label={dict.project.sections.architecture}>
           <Prose text={project.architecture} />
         </Section>
       )}
 
       {project.overview && (
-        <Section label="Overview">
+        <Section label={dict.project.sections.overview}>
           <Prose text={project.overview} />
         </Section>
       )}
 
       {project.features && project.features.length > 0 && (
-        <Section label="Features">
+        <Section label={dict.project.sections.features}>
           <ul className="grid gap-x-10 gap-y-7 md:grid-cols-2">
             {project.features.map((f) => (
               <li key={f.title} className="border-l border-border pl-5">
@@ -99,13 +120,19 @@ export default async function ProjectPage({
 
       {project.metrics &&
         (project.metrics.users || project.metrics.revenue) && (
-          <Section label="Metrics">
+          <Section label={dict.project.sections.metrics}>
             <div className="grid gap-5 md:grid-cols-2">
               {project.metrics.users && (
-                <Metric label="Users" value={project.metrics.users} />
+                <Metric
+                  label={dict.project.sections.users}
+                  value={project.metrics.users}
+                />
               )}
               {project.metrics.revenue && (
-                <Metric label="Revenue" value={project.metrics.revenue} />
+                <Metric
+                  label={dict.project.sections.revenue}
+                  value={project.metrics.revenue}
+                />
               )}
             </div>
           </Section>
@@ -113,10 +140,10 @@ export default async function ProjectPage({
 
       <div className="mt-16 border-t border-border pt-8">
         <Link
-          href="/work"
+          href={`/${lang}/work`}
           className="font-mono text-xs uppercase tracking-widest text-muted hover:text-foreground"
         >
-          ← All work
+          {dict.project.backToWork}
         </Link>
       </div>
     </article>
@@ -164,16 +191,16 @@ function Metric({ label, value }: { label: string; value: string }) {
   );
 }
 
-function linkLabel(key: string): string {
+function linkLabel(key: string, dict: Dictionary): string {
   switch (key) {
     case "appStore":
-      return "App Store";
+      return dict.links.appStore;
     case "playStore":
-      return "Play Store";
+      return dict.links.playStore;
     case "github":
-      return "GitHub";
+      return dict.links.github;
     case "web":
-      return "Website";
+      return dict.links.web;
     default:
       return key;
   }

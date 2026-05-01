@@ -7,10 +7,14 @@ export function IframeWithTabs({
   url,
   views,
   frame,
+  rolesLabel,
+  liveLabel,
 }: {
   url: string;
   views: IframeView[];
   frame: "browser" | "none";
+  rolesLabel: string;
+  liveLabel: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = views[activeIndex];
@@ -29,7 +33,7 @@ export function IframeWithTabs({
     <div>
       <section className="mb-12">
         <p className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">
-          ◼ Roles
+          ◼ {rolesLabel}
         </p>
         <div className="flex flex-wrap gap-2 font-mono text-xs uppercase tracking-widest">
           {views.map((v, i) => {
@@ -54,7 +58,7 @@ export function IframeWithTabs({
 
       <section>
         <p className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">
-          ◼ Live demo
+          ◼ {liveLabel}
         </p>
         <div className="-mx-6 md:-mx-12 lg:-mx-24 xl:-mx-32">
           {frame === "browser" ? (

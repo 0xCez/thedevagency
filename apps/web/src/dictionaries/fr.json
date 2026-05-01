@@ -1,0 +1,225 @@
+{
+  "nav": {
+    "work": "Travaux",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "On conçoit et développe des logiciels.",
+    "sub": "Mobile, web, IA, automatisation.",
+    "ctaWork": "Voir les projets →",
+    "ctaContact": "Démarrer un projet"
+  },
+  "whatWeDo": {
+    "label": "Ce qu'on fait",
+    "services": [
+      {
+        "label": "Design & UI/UX",
+        "description": "Design produit, design systems, animation. Du wireframe à la haute fidélité dans Figma. Marque, typographie, couleur."
+      },
+      {
+        "label": "Apps mobile",
+        "description": "iOS, Android, multiplateforme. React Native, Expo, modules natifs si nécessaire."
+      },
+      {
+        "label": "Web & SaaS",
+        "description": "Sites vitrine, dashboards multi-rôles, plateformes full-stack. React, Next.js, Vite, Tailwind, shadcn."
+      },
+      {
+        "label": "Ingénierie IA & ML",
+        "description": "Fonctionnalités LLM (RAG, agents, vision), modèles ML personnalisés en production. OpenAI, Claude, Vertex AI, CatBoost."
+      },
+      {
+        "label": "Backend, data & automatisation",
+        "description": "APIs, scrapers, pipelines de données, automatisation de workflows, auth, paiements, déploiement. Supabase, Firebase, Postgres, Apify, Edge Functions."
+      }
+    ]
+  },
+  "homeCta": {
+    "headline": "Un projet en tête ?",
+    "button": "Démarrer un projet →"
+  },
+  "work": {
+    "label": "Travaux",
+    "title": "Tous les projets"
+  },
+  "projectCard": {
+    "viewCase": "Voir le projet →"
+  },
+  "project": {
+    "sections": {
+      "liveDemo": "Démo live",
+      "roles": "Rôles",
+      "walkthroughs": "Démonstrations",
+      "architecture": "Architecture",
+      "overview": "Aperçu",
+      "features": "Fonctionnalités",
+      "metrics": "Chiffres",
+      "users": "Utilisateurs",
+      "revenue": "Revenus"
+    },
+    "backToWork": "← Tous les projets"
+  },
+  "about": {
+    "label": "À propos",
+    "title": "Un petit studio. Une production sérieuse.",
+    "sections": {
+      "whoWeAre": "Qui on est",
+      "whatWeBelieve": "Nos convictions",
+      "theNetwork": "Le réseau"
+    },
+    "whoWeAre": "Une équipe restreinte plus un réseau de spécialistes triés sur le volet. On travaille avec des fondateurs partant de zéro, et avec des équipes qui peaufinent ce qui existe déjà.",
+    "principles": [
+      {
+        "number": "01",
+        "title": "Design et code partent du même cerveau.",
+        "body": "La même personne conçoit et développe. Pas de transmission, pas de perte de traduction."
+      },
+      {
+        "number": "02",
+        "title": "En production dès le premier jour.",
+        "body": "On code pour la prod, pas pour le portfolio."
+      },
+      {
+        "number": "03",
+        "title": "Stacks épurées > stacks à la mode.",
+        "body": "On choisit les outils pour la vitesse de livraison, pas pour le crédit LinkedIn."
+      },
+      {
+        "number": "04",
+        "title": "On dit non quand on n'est pas le bon choix.",
+        "body": "On reste lean. Mieux vaut savoir tôt que perdre du temps."
+      }
+    ],
+    "networkDomains": [
+      "iOS natif (Swift)",
+      "Android natif (Kotlin)",
+      "ML & data (Python, PyTorch)",
+      "Backend approfondi (Go, Rust, Postgres)",
+      "Design systems",
+      "Motion (Lottie, Rive)",
+      "Analytics & growth",
+      "Copy & contenu"
+    ],
+    "cta": {
+      "label": "Prendre contact",
+      "title": "Vous avez un projet ?",
+      "button": "Démarrer un projet →"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Parlez-nous de votre projet.",
+    "intro": "Plus c'est concret, mieux c'est. Stade, périmètre, timeline, ce qui bloque. On répond sous 48 heures.",
+    "emailLabel": "Email",
+    "emailIntro": "Incluez : ce que vous construisez, où vous en êtes (idée / MVP / scaling), ce dont vous avez besoin (end-to-end / une couche spécifique), et votre timeline approximative. Plus de contexte au départ, plus vite on peut vous dire si on est le bon match.",
+    "backHome": "← Accueil"
+  },
+  "links": {
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "github": "GitHub",
+    "web": "Site"
+  },
+  "categories": {
+    "mobile": "mobile",
+    "web": "web"
+  },
+  "status": {
+    "live": "live",
+    "in-progress": "en cours",
+    "archived": "archivé"
+  },
+  "projects": {
+    "bet-ai": {
+      "tagline": "Scannez n'importe quel ticket. Analyse IA instantanée.",
+      "architecture": "Frontend Expo SDK 52 avec backend Firebase (Auth, Firestore, Storage, ~7K lignes de Cloud Functions). Six fournisseurs de données sportives alimentent des pipelines parallèles couvrant la NBA, le basketball universitaire (NCAA), la NFL, le football américain universitaire (NCAA), toutes les grandes ligues européennes de football, le MMA/UFC, et les Grands Chelems de tennis. Un modèle CatBoost personnalisé déployé sur Google Cloud Vertex AI calcule 88 features par prédiction, atteignant 70%+ de précision sur les paris joueur à intervalle de haute confiance.",
+      "features": [
+        {
+          "title": "Scan de ticket",
+          "description": "Image capturée par caméra ou galerie, OCR par GPT-4 Vision, puis parsée en données structurées et rendue en analyse complète."
+        },
+        {
+          "title": "Agrégation 6 sources de données",
+          "description": "Pipelines parallèles tirant de The Odds API, SportsGameOdds (avec rotation de clés), API-Sports, StatPal, API-Tennis, et WeatherAPI à chaque requête."
+        },
+        {
+          "title": "Modèle ML propriétaire",
+          "description": "CatBoost sur Google Cloud Vertex AI. 88 features par prédiction depuis les game logs joueurs en temps réel. Paris NBA et soccer atteignent 70%+ de précision sur les calls à haute confiance."
+        },
+        {
+          "title": "Couverture multi-sport",
+          "description": "NBA + NCAA basketball, NFL + NCAA football, toutes les grandes ligues européennes de football, MMA/UFC, et tennis (Grands Chelems + tournois principaux)."
+        },
+        {
+          "title": "Couche d'intelligence match",
+          "description": "Forme récente, confrontations directes, momentum, x-factors, et analyse IA écrite affichés à côté des cotes et value ratings sur chaque analyse."
+        },
+        {
+          "title": "Orchestration temps réel",
+          "description": "~7K lignes de Firebase Cloud Functions exécutant des appels async parallèles par analyse. Couche de cache Firestore avec TTL pour garder le temps de réponse bas malgré six APIs externes."
+        }
+      ]
+    },
+    "creator-platform": {
+      "tagline": "Gestion end-to-end des créateurs UGC pour la growth team de Bet.AI.",
+      "architecture": "SaaS multi-rôles sur Vite + React avec backend Supabase (Postgres, Auth, Storage, Deno Edge Functions). Des actors Apify et scrapers personnalisés ingèrent des métriques d'engagement sur des milliers de posts venant de centaines de créateurs chaque jour ; les données RevenueCat sont récupérées pour l'attribution des revenus. Trois dashboards gated par rôle — créateur UGC, account manager, admin — partagent un même schéma scopé par RLS.",
+      "features": [
+        {
+          "title": "Ingestion d'engagement",
+          "description": "Actors Apify et scrapers personnalisés ingèrent les métriques d'engagement sur des milliers de posts venant de centaines de créateurs chaque jour, upserts dans Postgres."
+        },
+        {
+          "title": "Sync RevenueCat",
+          "description": "Données d'abonnement et de revenus tirées de RevenueCat pour l'attribution par créateur et le calcul de KPIs en aval."
+        },
+        {
+          "title": "KPIs revenus",
+          "description": "Le dashboard admin track eCPM, RPM, ARPU, et revenus totaux à travers créateurs et fenêtres temporelles, calculés via des views Postgres."
+        },
+        {
+          "title": "Moteur de payouts",
+          "description": "Payouts par créateur calculés depuis les seuils de vues et tiers de post-count ; affichés dans une queue de review admin et des onglets d'historique de payouts par créateur."
+        },
+        {
+          "title": "Calendrier sport-aware",
+          "description": "Matchs à venir scrapés depuis des APIs sportives, couplés à des templates de format de contenu pour que les créateurs planifient leurs posts autour des événements live."
+        },
+        {
+          "title": "Dashboard candidatures",
+          "description": "L'admin review les candidatures de créateurs, approuve/rejette, et gère les accès basés sur les rôles (créateur / AM / admin) appuyés par Supabase Auth + RLS."
+        }
+      ]
+    },
+    "lastr": {
+      "tagline": "Reprenez le contrôle. Tenez plus longtemps.",
+      "architecture": "Expo SDK 52 + Expo Router + Supabase + Zustand. L'investissement technique est concentré dans la couche d'interaction — transitions Reanimated 3, animations Lottie, expo-haptics sur chaque interaction, fonds gradient et blur ambiants, et un onboarding 13 étapes architecturé autour de social proof, effort perçu, et un moment de révélation de plan personnalisé.",
+      "features": [
+        {
+          "title": "Onboarding 13 étapes",
+          "description": "Welcome → questions → symptômes → social proof → analyse → révélation → éducation → plan personnalisé → rating → paywall → login. Construit autour de l'effort perçu, la personnalisation, et des hooks psychologiques."
+        },
+        {
+          "title": "Transitions Reanimated 3",
+          "description": "Chaque écran utilise des animations spring/timing et entrées FadeInDown. Layout transitions, gestes interpolés, état sharedValue. Le mouvement est kinétique — pas de jumps, pas de jank."
+        },
+        {
+          "title": "Couche visuelle ambiante",
+          "description": "Fonds LinearGradient, overlays BlurView, glows ambiants animés derrière les CTAs hero. Palette noire + ambre chaude consistante sur toute la surface de l'app."
+        },
+        {
+          "title": "Feedback tactile",
+          "description": "expo-haptics se déclenche sur chaque interaction significative — taps, swipes, avancée d'écran. Calibré pour renforcer l'intention sans être bruyant."
+        },
+        {
+          "title": "Design system custom",
+          "description": "Composants réutilisables faits main : ShimmerCTA, AnimatedSplash, AnimatedIcon, OnboardingProgressBar, ProgressGraph, OptionButton. Typographie DM Sans + Inter, fichier de constantes couleur unique."
+        },
+        {
+          "title": "Moteur de programme 90 jours",
+          "description": "Sessions quotidiennes à travers trois modalités (body-scan, respiration, physique) avec animations Lottie et timers. Streak, score, et jour trackés dans Zustand (persistés AsyncStorage) et Supabase. RevenueCat gate le programme complet."
+        }
+      ]
+    }
+  }
+}

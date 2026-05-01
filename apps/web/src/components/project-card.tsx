@@ -1,10 +1,19 @@
 import Link from "next/link";
 import type { Project } from "@portfolio/embeds";
+import type { Locale } from "@/lib/i18n";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  lang,
+  viewLabel,
+}: {
+  project: Project;
+  lang: Locale;
+  viewLabel: string;
+}) {
   return (
     <Link
-      href={`/work/${project.slug}`}
+      href={`/${lang}/work/${project.slug}`}
       className="group flex h-full flex-col border border-border p-5 transition hover:border-foreground"
     >
       <div className="mb-4 flex items-center justify-between font-mono text-xs uppercase tracking-widest text-muted">
@@ -26,7 +35,7 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
       <div className="font-mono text-xs text-muted group-hover:text-foreground">
-        View case study →
+        {viewLabel}
       </div>
     </Link>
   );

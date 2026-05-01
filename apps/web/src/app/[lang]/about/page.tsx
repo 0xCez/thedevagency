@@ -1,62 +1,45 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getDictionary, isLocale } from "@/lib/i18n";
 
-export const metadata = { title: "About — The Dev Agency" };
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const dict = await getDictionary(lang);
+  return { title: dict.about.label };
+}
 
-const principles: { number: string; title: string; body: string }[] = [
-  {
-    number: "01",
-    title: "Design and code ship from the same brain.",
-    body: "Same person designs and builds. No handoffs, no translation loss.",
-  },
-  {
-    number: "02",
-    title: "Production from day one.",
-    body: "We build for shipping, not for portfolios.",
-  },
-  {
-    number: "03",
-    title: "Lean stacks > fashionable stacks.",
-    body: "We pick tools for shipping speed, not LinkedIn cred.",
-  },
-  {
-    number: "04",
-    title: "We tell you when we're not the right fit.",
-    body: "We run lean. Better to know early than waste each other's time.",
-  },
-];
+export default async function AboutPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
 
-const networkDomains: string[] = [
-  "Native iOS / Swift",
-  "Native Android / Kotlin",
-  "ML & data (Python, PyTorch)",
-  "Backend depth (Go, Rust, Postgres)",
-  "Design systems",
-  "Motion (Lottie, Rive)",
-  "Growth analytics",
-  "Copy + content",
-];
-
-export default function AboutPage() {
   return (
     <article className="mx-auto max-w-6xl px-6 lg:px-8 py-16 md:py-20">
       <p className="mb-3 font-mono text-xs uppercase tracking-widest text-muted">
-        ◼ About
+        ◼ {dict.about.label}
       </p>
       <h1 className="mb-12 max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-        A small studio. Production-grade output.
+        {dict.about.title}
       </h1>
 
-      <Section label="Who we are">
+      <Section label={dict.about.sections.whoWeAre}>
         <p className="max-w-3xl text-base leading-relaxed text-muted md:text-lg">
-          A tight core plus a curated network of specialists. We work with
-          founders building from zero, and with teams polishing what&apos;s
-          already there.
+          {dict.about.whoWeAre}
         </p>
       </Section>
 
-      <Section label="What we believe">
+      <Section label={dict.about.sections.whatWeBelieve}>
         <ol className="grid gap-x-10 gap-y-6 md:grid-cols-2">
-          {principles.map((p) => (
+          {dict.about.principles.map((p) => (
             <li key={p.number} className="border-l border-border pl-5">
               <p className="mb-2 font-mono text-xs uppercase tracking-widest text-muted">
                 {p.number}
@@ -70,9 +53,9 @@ export default function AboutPage() {
         </ol>
       </Section>
 
-      <Section label="The network">
+      <Section label={dict.about.sections.theNetwork}>
         <ul className="grid gap-x-10 gap-y-2 md:grid-cols-2">
-          {networkDomains.map((d) => (
+          {dict.about.networkDomains.map((d) => (
             <li
               key={d}
               className="border-l border-border pl-3 font-mono text-sm text-muted"
@@ -85,16 +68,16 @@ export default function AboutPage() {
 
       <div className="mt-20 border-t border-border pt-16 text-center">
         <p className="mb-4 font-mono text-xs uppercase tracking-widest text-muted">
-          ◼ Get in touch
+          ◼ {dict.about.cta.label}
         </p>
         <h2 className="mx-auto mb-5 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">
-          Working on something?
+          {dict.about.cta.title}
         </h2>
         <Link
-          href="/contact"
+          href={`/${lang}/contact`}
           className="inline-block border border-foreground bg-foreground px-6 py-3 font-mono text-xs uppercase tracking-widest text-background transition hover:bg-transparent hover:text-foreground"
         >
-          Start a project →
+          {dict.about.cta.button}
         </Link>
       </div>
     </article>

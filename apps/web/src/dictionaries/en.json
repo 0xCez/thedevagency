@@ -1,0 +1,225 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "We design and build software.",
+    "sub": "Mobile, web, AI, automation.",
+    "ctaWork": "See selected work →",
+    "ctaContact": "Start a project"
+  },
+  "whatWeDo": {
+    "label": "What we do",
+    "services": [
+      {
+        "label": "Design & UI/UX",
+        "description": "Product design, design systems, motion. Wireframes to high-fidelity in Figma. Brand, type, color."
+      },
+      {
+        "label": "Mobile apps",
+        "description": "iOS, Android, cross-platform. React Native, Expo, native modules when needed."
+      },
+      {
+        "label": "Web apps & SaaS",
+        "description": "Marketing sites, multi-role dashboards, full-stack platforms. React, Next.js, Vite, Tailwind, shadcn."
+      },
+      {
+        "label": "AI & ML engineering",
+        "description": "LLM features (RAG, agents, vision), custom ML models in production. OpenAI, Claude, Vertex AI, CatBoost."
+      },
+      {
+        "label": "Backend, data & automation",
+        "description": "APIs, scrapers, data pipelines, workflow automation, auth, payments, deploy. Supabase, Firebase, Postgres, Apify, Edge Functions."
+      }
+    ]
+  },
+  "homeCta": {
+    "headline": "Have a project in mind?",
+    "button": "Start a project →"
+  },
+  "work": {
+    "label": "Work",
+    "title": "All projects"
+  },
+  "projectCard": {
+    "viewCase": "View case study →"
+  },
+  "project": {
+    "sections": {
+      "liveDemo": "Live demo",
+      "roles": "Roles",
+      "walkthroughs": "Walkthroughs",
+      "architecture": "Architecture",
+      "overview": "Overview",
+      "features": "Features",
+      "metrics": "Metrics",
+      "users": "Users",
+      "revenue": "Revenue"
+    },
+    "backToWork": "← All work"
+  },
+  "about": {
+    "label": "About",
+    "title": "A small studio. Production-grade output.",
+    "sections": {
+      "whoWeAre": "Who we are",
+      "whatWeBelieve": "What we believe",
+      "theNetwork": "The network"
+    },
+    "whoWeAre": "A tight core plus a curated network of specialists. We work with founders building from zero, and with teams polishing what's already there.",
+    "principles": [
+      {
+        "number": "01",
+        "title": "Design and code from the same brain.",
+        "body": "Same person designs and builds. No handoffs, no translation loss."
+      },
+      {
+        "number": "02",
+        "title": "Production from day one.",
+        "body": "We build for the real thing, not for portfolios."
+      },
+      {
+        "number": "03",
+        "title": "Lean stacks > fashionable stacks.",
+        "body": "We pick tools for delivery speed, not LinkedIn cred."
+      },
+      {
+        "number": "04",
+        "title": "We tell you when we're not the right fit.",
+        "body": "We run lean. Better to know early than waste each other's time."
+      }
+    ],
+    "networkDomains": [
+      "Native iOS / Swift",
+      "Native Android / Kotlin",
+      "ML & data (Python, PyTorch)",
+      "Backend depth (Go, Rust, Postgres)",
+      "Design systems",
+      "Motion (Lottie, Rive)",
+      "Growth analytics",
+      "Copy + content"
+    ],
+    "cta": {
+      "label": "Get in touch",
+      "title": "Working on something?",
+      "button": "Start a project →"
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Tell us about your project.",
+    "intro": "The more concrete, the better. Stage, scope, timeline, what's stuck. We'll respond within 48 hours.",
+    "emailLabel": "Email",
+    "emailIntro": "Include: what you're building, where you are (idea / MVP / scaling), what you need (end-to-end / a specific layer), and your rough timeline. The more context up front, the faster we can tell you whether we're a fit.",
+    "backHome": "← Home"
+  },
+  "links": {
+    "appStore": "App Store",
+    "playStore": "Play Store",
+    "github": "GitHub",
+    "web": "Website"
+  },
+  "categories": {
+    "mobile": "mobile",
+    "web": "web"
+  },
+  "status": {
+    "live": "live",
+    "in-progress": "in-progress",
+    "archived": "archived"
+  },
+  "projects": {
+    "bet-ai": {
+      "tagline": "Scan any bet slip. Get instant AI analysis.",
+      "architecture": "Expo SDK 52 frontend with a Firebase backend (Auth, Firestore, Storage, ~7K LOC of Cloud Functions). Six sports data providers feed parallel pipelines covering NBA, NCAA basketball, NFL, NCAA football, all major EU soccer leagues, MMA/UFC, and tennis Grand Slams. A custom CatBoost model deployed on Google Cloud Vertex AI computes 88 engineered features per prediction, hitting 70%+ accuracy on high-confidence interval player prop calls.",
+      "features": [
+        {
+          "title": "Bet slip scan",
+          "description": "Image captured via camera or gallery, OCR'd by GPT-4 Vision, then parsed into typed bet slip data and rendered as a structured analysis."
+        },
+        {
+          "title": "Six-source data aggregation",
+          "description": "Parallel pipelines pull from The Odds API, SportsGameOdds (with key rotation), API-Sports, StatPal, API-Tennis, and WeatherAPI per request."
+        },
+        {
+          "title": "Custom ML props model",
+          "description": "CatBoost on Google Cloud Vertex AI. 88 engineered features per prediction from real-time player game logs. NBA and soccer props hit 70%+ accuracy on high-confidence interval calls."
+        },
+        {
+          "title": "Multi-sport coverage",
+          "description": "NBA + NCAA basketball, NFL + NCAA football, all major EU soccer leagues, MMA/UFC, and tennis Grand Slams + main tournaments."
+        },
+        {
+          "title": "Match intelligence layer",
+          "description": "Recent form, head-to-head, momentum, x-factors, and a written AI breakdown surfaced alongside odds and value ratings on every analysis."
+        },
+        {
+          "title": "Real-time orchestration",
+          "description": "~7K LOC of Firebase Cloud Functions running parallel async calls per analysis. Firestore cache layer with TTL controls keeps response time low across six external APIs."
+        }
+      ]
+    },
+    "creator-platform": {
+      "tagline": "End-to-end UGC creator management for Bet.AI's growth team.",
+      "architecture": "Multi-role SaaS on Vite + React with a Supabase backend (Postgres, Auth, Storage, Deno Edge Functions). Apify actors and custom scrapers ingest engagement metrics on thousands of posts from hundreds of creators daily; RevenueCat data is pulled for revenue attribution. Three role-gated dashboards — UGC creator, account manager, admin — share one schema scoped by RLS.",
+      "features": [
+        {
+          "title": "Engagement ingestion",
+          "description": "Apify actors and custom scrapers ingest engagement metrics on thousands of posts from hundreds of creators daily, upserted into Postgres."
+        },
+        {
+          "title": "RevenueCat sync",
+          "description": "Subscription and revenue data pulled from RevenueCat for per-creator attribution and downstream KPI calculation."
+        },
+        {
+          "title": "Revenue KPIs",
+          "description": "Admin dashboard tracks eCPM, RPM, ARPU, and total revenue across creators and time windows, computed via Postgres views."
+        },
+        {
+          "title": "Payout engine",
+          "description": "Per-creator payouts computed from view thresholds and post-count tiers; surfaced in an admin review queue and per-creator payout history tabs."
+        },
+        {
+          "title": "Sports-aware calendar",
+          "description": "Upcoming games scraped from sports APIs, paired with content-format templates so creators can plan posts against live events."
+        },
+        {
+          "title": "Applications dashboard",
+          "description": "Admin reviews creator applications, approves/rejects, and manages role-based access (creator / AM / admin) backed by Supabase Auth + RLS."
+        }
+      ]
+    },
+    "lastr": {
+      "tagline": "Take control. Last longer.",
+      "architecture": "Expo SDK 52 + Expo Router + Supabase + Zustand. The technical investment is concentrated in the interaction layer — Reanimated 3 transitions, Lottie cues, expo-haptics on every interaction, gradient and blur ambient backgrounds, and a 13-step onboarding flow architected around social proof, perceived effort, and a custom-plan reveal moment.",
+      "features": [
+        {
+          "title": "13-step onboarding flow",
+          "description": "Welcome → questions → symptoms → social proof → analyzing → analysis reveal → education → custom plan → rating → paywall → login. Built around perceived effort, personalization, and psychological hooks."
+        },
+        {
+          "title": "Reanimated 3 transitions",
+          "description": "Every screen uses spring/timing animations and FadeInDown entries. Layout transitions, interpolated gestures, sharedValue state. Movement reads as kinetic — no jumps, no jank."
+        },
+        {
+          "title": "Ambient visual layer",
+          "description": "LinearGradient backgrounds, BlurView overlays, animated ambient glows behind hero CTAs. Consistent black + warm amber palette across every surface in the app."
+        },
+        {
+          "title": "Tactile feedback",
+          "description": "expo-haptics fires on every meaningful interaction — taps, swipes, screen advance. Calibrated to reinforce intent without being noisy."
+        },
+        {
+          "title": "Custom design system",
+          "description": "Hand-built reusable components: ShimmerCTA, AnimatedSplash, AnimatedIcon, OnboardingProgressBar, ProgressGraph, OptionButton. DM Sans + Inter typography, single color constants file."
+        },
+        {
+          "title": "90-day program engine",
+          "description": "Daily sessions across three modalities (body-scan, breathing, physical) with Lottie cues and timers. Streak, score, and day tracked in Zustand (AsyncStorage-persisted) and Supabase. RevenueCat gates the full program."
+        }
+      ]
+    }
+  }
+}

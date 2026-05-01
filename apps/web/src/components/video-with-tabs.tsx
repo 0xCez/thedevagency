@@ -3,7 +3,15 @@
 import { useState } from "react";
 import type { VideoView } from "@portfolio/embeds";
 
-export function VideoWithTabs({ views }: { views: VideoView[] }) {
+export function VideoWithTabs({
+  views,
+  walkthroughsLabel,
+  liveLabel,
+}: {
+  views: VideoView[];
+  walkthroughsLabel: string;
+  liveLabel: string;
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = views[activeIndex];
 
@@ -11,7 +19,7 @@ export function VideoWithTabs({ views }: { views: VideoView[] }) {
     <div>
       <section className="mb-12">
         <p className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">
-          ◼ Walkthroughs
+          ◼ {walkthroughsLabel}
         </p>
         <div className="flex flex-wrap gap-2 font-mono text-xs uppercase tracking-widest">
           {views.map((v, i) => {
@@ -36,7 +44,7 @@ export function VideoWithTabs({ views }: { views: VideoView[] }) {
 
       <section>
         <p className="mb-5 font-mono text-xs uppercase tracking-widest text-muted">
-          ◼ Live demo
+          ◼ {liveLabel}
         </p>
         <PhoneFrame>
           <video
