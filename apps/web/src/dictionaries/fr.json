@@ -41,7 +41,7 @@
   },
   "work": {
     "label": "Projets",
-    "title": "Tous les projets"
+    "title": "Tous nos projets"
   },
   "projectCard": {
     "viewCase": "Voir le projet →"
@@ -58,11 +58,11 @@
       "users": "Utilisateurs",
       "revenue": "Revenus"
     },
-    "backToWork": "← Tous les projets"
+    "backToWork": "← Tous nos projets"
   },
   "about": {
     "label": "À propos",
-    "greeting": "Salut, c'est Cesar.",
+    "greeting": "Hey, je suis Cesar.",
     "intro": "Je dirige The Dev Agency. Je conçois et développe des logiciels end-to-end — apps mobile, plateformes web, automatisation et fonctionnalités IA.",
     "products": "Plusieurs produits en prod totalisant des dizaines de milliers d'utilisateurs : Bet.AI, Lastr, Creator Platform, Reel Farm…",
     "outro": "Envie de bosser ensemble ? Envoyez-moi un mail —",
