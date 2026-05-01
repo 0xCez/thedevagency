@@ -65,7 +65,8 @@
     "greeting": "Salut, c'est Cesar.",
     "intro": "Je dirige The Dev Agency. Je conçois et développe des logiciels end-to-end — apps mobile, plateformes web, automatisation et fonctionnalités IA.",
     "products": "Plusieurs produits en prod totalisant des dizaines de milliers d'utilisateurs : Bet.AI, Lastr, Creator Platform, Reel Farm…",
-    "outro": "Envie de bosser ensemble ? Envoyez-moi un mail —"
+    "outro": "Envie de bosser ensemble ? Envoyez-moi un mail —",
+    "linkedinLine": "Ou retrouvez-moi sur"
   },
   "contact": {
     "label": "Contact",

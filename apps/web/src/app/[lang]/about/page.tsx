@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getDictionary, isLocale } from "@/lib/i18n";
 
 const EMAIL = "cesar@thedevagency.xyz";
+const LINKEDIN = "https://www.linkedin.com/in/cesar-derey/";
 
 export async function generateMetadata({
   params,
@@ -43,6 +44,17 @@ export default async function AboutPage({
             className="text-foreground underline decoration-border underline-offset-4 transition hover:decoration-foreground"
           >
             {EMAIL}
+          </a>
+        </p>
+        <p>
+          {dict.about.linkedinLine}{" "}
+          <a
+            href={LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground underline decoration-border underline-offset-4 transition hover:decoration-foreground"
+          >
+            LinkedIn →
           </a>
         </p>
       </div>

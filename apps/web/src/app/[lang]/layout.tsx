@@ -90,7 +90,10 @@ export default async function RootLayout({
               email: "cesar@thedevagency.xyz",
               description:
                 "Software studio. Mobile apps, web platforms, AI integrations, automation.",
-              sameAs: ["https://github.com/0xCez"],
+              sameAs: [
+                "https://github.com/0xCez",
+                "https://www.linkedin.com/in/cesar-derey/",
+              ],
             }),
           }}
         />

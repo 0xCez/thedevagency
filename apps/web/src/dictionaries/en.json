@@ -65,7 +65,8 @@
     "greeting": "Hi, I'm Cesar.",
     "intro": "I run The Dev Agency. I design and build software end-to-end — mobile apps, web platforms, AI automation and features.",
     "products": "Several live products counting tens of thousands of users: Bet.AI, Lastr, Creator Platform, Reel Farm…",
-    "outro": "Want to work together? Shoot me an email —"
+    "outro": "Want to work together? Shoot me an email —",
+    "linkedinLine": "Or find me on"
   },
   "contact": {
     "label": "Contact",
