@@ -62,39 +62,10 @@
   },
   "about": {
     "label": "About",
-    "title": "A small studio building modern software.",
-    "intro": "Tight core team plus a network of specialists pulled in when projects need depth. Mostly remote. We work with founders building v1 products and teams extending what they have.",
-    "builtLabel": "What we've built",
-    "built": [
-      {
-        "name": "Bet.AI",
-        "slug": "bet-ai",
-        "blurb": "AI sports betting app. Custom CatBoost ML model on Vertex AI, 6-source data pipeline."
-      },
-      {
-        "name": "Creator Platform",
-        "slug": "creator-platform",
-        "blurb": "Multi-role SaaS for Bet.AI's UGC team. Daily scrapers, payouts engine, financial KPIs."
-      },
-      {
-        "name": "Lastr'",
-        "slug": "lastr",
-        "blurb": "iOS health app. 13-step psychological onboarding, custom design system, Reanimated motion."
-      }
-    ],
-    "howWeWorkLabel": "How we work",
-    "howWeWork": "Async-first. Lean process — no PMs, no week-long discovery phases. We talk directly to the decision-maker, scope tight, build, deliver.",
-    "notForUsLabel": "Not for us",
-    "notForUs": [
-      "Hourly contracts or staff augmentation. We work in scoped engagements with deliverables.",
-      "Projects without a decision-maker we can talk to directly.",
-      "Pure brand-only work — hire a brand studio for that."
-    ],
-    "cta": {
-      "label": "Get in touch",
-      "title": "Working on something?",
-      "button": "Start a project →"
-    }
+    "greeting": "Hi, I'm Cesar.",
+    "intro": "I run The Dev Agency. I design and build software end-to-end — mobile apps, web platforms, AI automation and features.",
+    "products": "Several live products counting tens of thousands of users: Bet.AI, Lastr, Creator Platform, Reel Farm…",
+    "outro": "Want to work together? Shoot me an email —"
   },
   "contact": {
     "label": "Contact",

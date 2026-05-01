@@ -62,39 +62,10 @@
   },
   "about": {
     "label": "À propos",
-    "title": "Un petit studio qui développe des logiciels modernes.",
-    "intro": "Équipe restreinte au cœur, plus un réseau de spécialistes mobilisés quand les projets demandent de la profondeur. Surtout en remote. On bosse avec des fondateurs construisant leur v1 et avec des équipes qui étendent ce qui existe.",
-    "builtLabel": "Ce qu'on a construit",
-    "built": [
-      {
-        "name": "Bet.AI",
-        "slug": "bet-ai",
-        "blurb": "App d'analyse de paris IA. Modèle ML CatBoost custom sur Vertex AI, pipeline de données 6 sources."
-      },
-      {
-        "name": "Creator Platform",
-        "slug": "creator-platform",
-        "blurb": "SaaS multi-rôles pour l'équipe UGC de Bet.AI. Scrapers quotidiens, moteur de payouts, KPIs financiers."
-      },
-      {
-        "name": "Lastr'",
-        "slug": "lastr",
-        "blurb": "App santé iOS. Onboarding psychologique 13 étapes, design system custom, motion Reanimated."
-      }
-    ],
-    "howWeWorkLabel": "Notre méthode",
-    "howWeWork": "Async-first. Process lean — pas de PMs, pas de phases de discovery d'une semaine. On parle directement au décideur, on scope serré, on construit, on livre.",
-    "notForUsLabel": "Pas pour nous",
-    "notForUs": [
-      "Contrats à l'heure ou staff augmentation. On bosse en engagements scopés avec livrables.",
-      "Projets sans décideur à qui parler directement.",
-      "Travail purement brand — engagez un studio de brand pour ça."
-    ],
-    "cta": {
-      "label": "Prendre contact",
-      "title": "Vous avez un projet ?",
-      "button": "Démarrer un projet →"
-    }
+    "greeting": "Salut, c'est Cesar.",
+    "intro": "Je dirige The Dev Agency. Je conçois et développe des logiciels end-to-end — apps mobile, plateformes web, automatisation et fonctionnalités IA.",
+    "products": "Plusieurs produits en prod totalisant des dizaines de milliers d'utilisateurs : Bet.AI, Lastr, Creator Platform, Reel Farm…",
+    "outro": "Envie de bosser ensemble ? Envoyez-moi un mail —"
   },
   "contact": {
     "label": "Contact",
