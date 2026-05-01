@@ -1,6 +1,6 @@
 {
   "nav": {
-    "work": "Work",
+    "work": "Projects",
     "about": "About",
     "contact": "Contact"
   },
@@ -40,7 +40,7 @@
     "button": "Start a project →"
   },
   "work": {
-    "label": "Work",
+    "label": "Projects",
     "title": "All projects"
   },
   "projectCard": {
