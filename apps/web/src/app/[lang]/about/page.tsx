@@ -25,14 +25,15 @@ export default async function AboutPage({
   const dict = await getDictionary(lang);
 
   return (
-    <article className="mx-auto max-w-6xl px-6 lg:px-8 py-20 md:py-28">
-      <p className="mb-6 font-mono text-xs uppercase tracking-widest text-muted">
-        ◼ {dict.about.label}
-      </p>
-
-      <h1 className="mb-10 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-        {dict.about.greeting}
-      </h1>
+    <article className="mx-auto max-w-6xl px-6 lg:px-8 py-16 md:py-20">
+      <header className="mb-12 md:mb-16">
+        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-muted">
+          ◼ {dict.about.label}
+        </p>
+        <h1 className="mb-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
+          {dict.about.greeting}
+        </h1>
+      </header>
 
       <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-muted md:text-xl">
         <p>{dict.about.intro}</p>

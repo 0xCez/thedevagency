@@ -26,15 +26,17 @@ export default async function ContactPage({
 
   return (
     <article className="mx-auto max-w-6xl px-6 lg:px-8 py-16 md:py-20">
-      <p className="mb-3 font-mono text-xs uppercase tracking-widest text-muted">
-        ◼ {dict.contact.label}
-      </p>
-      <h1 className="mb-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-        {dict.contact.title}
-      </h1>
-      <p className="mb-12 max-w-2xl text-base text-muted md:text-lg">
-        {dict.contact.intro}
-      </p>
+      <header className="mb-12 md:mb-16">
+        <p className="mb-3 font-mono text-xs uppercase tracking-widest text-muted">
+          ◼ {dict.contact.label}
+        </p>
+        <h1 className="mb-6 max-w-3xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
+          {dict.contact.title}
+        </h1>
+        <p className="max-w-2xl text-lg leading-relaxed text-muted md:text-xl">
+          {dict.contact.intro}
+        </p>
+      </header>
 
       <Section label={dict.contact.emailLabel}>
         <a
