@@ -13,7 +13,7 @@ export default async function OGImage({
   const { lang } = await params;
   const tagline =
     lang === "fr"
-      ? "On conçoit et développe des logiciels."
+      ? "On crée et développe des logiciels."
       : "We design and build software.";
   const sub =
     lang === "fr" ? "Mobile, web, IA, automatisation." : "Mobile, web, AI, automation.";

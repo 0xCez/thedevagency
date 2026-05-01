@@ -1,11 +1,11 @@
 {
   "nav": {
-    "work": "Travaux",
+    "work": "Projets",
     "about": "À propos",
     "contact": "Contact"
   },
   "hero": {
-    "headline": "On conçoit et développe des logiciels.",
+    "headline": "On crée et développe des logiciels.",
     "sub": "Mobile, web, IA, automatisation.",
     "ctaWork": "Voir les projets →",
     "ctaContact": "Démarrer un projet"
@@ -26,7 +26,7 @@
         "description": "Sites vitrine, dashboards multi-rôles, plateformes full-stack. React, Next.js, Vite, Tailwind, shadcn."
       },
       {
-        "label": "Ingénierie IA & ML",
+        "label": "IA & ML",
         "description": "Fonctionnalités LLM (RAG, agents, vision), modèles ML personnalisés en production. OpenAI, Claude, Vertex AI, CatBoost."
       },
       {
@@ -40,7 +40,7 @@
     "button": "Démarrer un projet →"
   },
   "work": {
-    "label": "Travaux",
+    "label": "Projets",
     "title": "Tous les projets"
   },
   "projectCard": {
@@ -62,44 +62,33 @@
   },
   "about": {
     "label": "À propos",
-    "title": "Un petit studio. Une production sérieuse.",
-    "sections": {
-      "whoWeAre": "Qui on est",
-      "whatWeBelieve": "Nos convictions",
-      "theNetwork": "Le réseau"
-    },
-    "whoWeAre": "Une équipe restreinte plus un réseau de spécialistes triés sur le volet. On travaille avec des fondateurs partant de zéro, et avec des équipes qui peaufinent ce qui existe déjà.",
-    "principles": [
+    "title": "Un petit studio qui développe des logiciels modernes.",
+    "intro": "Équipe restreinte au cœur, plus un réseau de spécialistes mobilisés quand les projets demandent de la profondeur. Surtout en remote. On bosse avec des fondateurs construisant leur v1 et avec des équipes qui étendent ce qui existe.",
+    "builtLabel": "Ce qu'on a construit",
+    "built": [
       {
-        "number": "01",
-        "title": "Design et code partent du même cerveau.",
-        "body": "La même personne conçoit et développe. Pas de transmission, pas de perte de traduction."
+        "name": "Bet.AI",
+        "slug": "bet-ai",
+        "blurb": "App d'analyse de paris IA. Modèle ML CatBoost custom sur Vertex AI, pipeline de données 6 sources."
       },
       {
-        "number": "02",
-        "title": "En production dès le premier jour.",
-        "body": "On code pour la prod, pas pour le portfolio."
+        "name": "Creator Platform",
+        "slug": "creator-platform",
+        "blurb": "SaaS multi-rôles pour l'équipe UGC de Bet.AI. Scrapers quotidiens, moteur de payouts, KPIs financiers."
       },
       {
-        "number": "03",
-        "title": "Stacks épurées > stacks à la mode.",
-        "body": "On choisit les outils pour la vitesse de livraison, pas pour le crédit LinkedIn."
-      },
-      {
-        "number": "04",
-        "title": "On dit non quand on n'est pas le bon choix.",
-        "body": "On reste lean. Mieux vaut savoir tôt que perdre du temps."
+        "name": "Lastr'",
+        "slug": "lastr",
+        "blurb": "App santé iOS. Onboarding psychologique 13 étapes, design system custom, motion Reanimated."
       }
     ],
-    "networkDomains": [
-      "iOS natif (Swift)",
-      "Android natif (Kotlin)",
-      "ML & data (Python, PyTorch)",
-      "Backend approfondi (Go, Rust, Postgres)",
-      "Design systems",
-      "Motion (Lottie, Rive)",
-      "Analytics & growth",
-      "Copy & contenu"
+    "howWeWorkLabel": "Notre méthode",
+    "howWeWork": "Async-first. Process lean — pas de PMs, pas de phases de discovery d'une semaine. On parle directement au décideur, on scope serré, on construit, on livre.",
+    "notForUsLabel": "Pas pour nous",
+    "notForUs": [
+      "Contrats à l'heure ou staff augmentation. On bosse en engagements scopés avec livrables.",
+      "Projets sans décideur à qui parler directement.",
+      "Travail purement brand — engagez un studio de brand pour ça."
     ],
     "cta": {
       "label": "Prendre contact",
